@@ -26,4 +26,6 @@ feign:
         readTimeout: 300000
 
 
-
+graphql:
+  servlet:
+    corsEnabled: true

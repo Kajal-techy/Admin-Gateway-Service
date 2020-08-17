@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface OrderProxy {
 
     @GetMapping("/v1/order/{id}")
-    ResponseEntity<Order> getOrderById(@PathVariable(value = "id") String id);
+    ResponseEntity<Order> getOrderById(@PathVariable String id);
 
     @PostMapping("/v1/order")
     ResponseEntity<Order> createOrder(Order order);
