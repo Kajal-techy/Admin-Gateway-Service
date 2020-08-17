@@ -1,11 +1,11 @@
 type Order {
-    orderId: String!,
+    orderId: ID!,
     userId: String,
     quantity: Int
 }
 
 type User {
-    id: String!,
+    id: ID!,
     firstName: String,
     lastName: String,
     userName: String,
@@ -13,15 +13,15 @@ type User {
 }
 
 type Query {
-        getOrderById(id: String!): Order
+        getOrderById(id: ID!): Order
 
-        userById(loggedInUserId: String!, id: String!): User
+        userById(loggedInUserId: ID!, id: ID!): User
 
         userByUserName(userName: String!): User
 }
 
 type Mutation {
-        createOrder(productId: String!, userId: String!, quantity: Int): Order
+        createOrder(productId: ID!, userId: ID!, quantity: Int): Order
 
         createUser(firstName: String, lastName: String, userName: String, password: String): User
 }
