@@ -13,7 +13,10 @@ import java.util.List;
 public interface UserProxy {
 
     @GetMapping("/v1/users")
-    List<User> getUserDetailsByName(@RequestParam String userName);
+    List<User> getUsers(@RequestParam(required = false) String userName);
+
+    @GetMapping("/v1/users")
+    List<User> getUsers();
 
     @GetMapping("/v1/users/{id}")
     @Headers("loggedInUserId: {loggedInUserId}")

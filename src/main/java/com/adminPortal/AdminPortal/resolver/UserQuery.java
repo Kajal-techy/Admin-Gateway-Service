@@ -24,7 +24,12 @@ public class UserQuery implements GraphQLQueryResolver {
     }
 
     public User getUserByUserName(String userName) {
-        List<User> user = userProxy.getUserDetailsByName(userName);
+        List<User> user = userProxy.getUsers(userName);
         return user.get(0);
+    }
+
+    public List<User>  getAllUsers() {
+        List<User> user = userProxy.getUsers();
+        return user;
     }
 }

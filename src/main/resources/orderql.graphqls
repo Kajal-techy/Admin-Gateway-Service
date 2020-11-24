@@ -18,6 +18,8 @@ type Query {
         userById(loggedInUserId: ID!, id: ID!): User
 
         userByUserName(userName: String!): User
+
+        getAllUsers: [User]
 }
 
 type Mutation {
